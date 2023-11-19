@@ -1,0 +1,155 @@
+<div  class="inicio">
+    <header>
+        <app-navbar></app-navbar>
+        <div class="contenedor-header">
+        
+            <div class="header-item">
+                <h1 class="h1-haeder">¡Hey honey!</h1>
+                <p class="p-header-1">Bienvenida a tu</p>
+                <p class="p-header-2">rincón de belleza</p>
+            </div>
+
+        </div>
+    </header>
+    <!-- CIERRE HEADER -->
+
+    <section class="banner-marcas">
+        <h2 class="h2-marcas">Marcas</h2>
+
+        <div class="contenedor-slider">
+
+            <a routerLink="/pages-marca/loreal">
+                <img src="/assets/iconos-logos/M 1.png" alt="img-slider" class="img-slider">
+            </a>
+            <a routerLink="/pages-marca/maybelline">
+                <img src="/assets/iconos-logos/M 2.png" alt="img-slider" class="img-slider">
+            </a>
+            <a routerLink="/pages-marca/revolution">
+                <img src="/assets/iconos-logos/M 3.png" alt="img-slider" class="img-slider">
+            </a>
+            <a routerLink="/pages-marca/elf">
+                <img src="/assets/iconos-logos/M 4.png" alt="img-slider" class="img-slider">
+            </a>
+            <a routerLink="/pages-marca/revlon">
+                <img src="/assets/iconos-logos/M 5.png" alt="img-slider" class="img-slider">
+            </a>
+            <a routerLink="/pages-marca/la-colors">
+                <img src="/assets/iconos-logos/M 6.png" alt="img-slider" class="img-slider">
+            </a>
+            <a routerLink="/pages-marca/nyx">
+                <img src="/assets/iconos-logos/M 7.png" alt="img-slider" class="img-slider">
+            </a>
+            <a routerLink="/pages-marca/phycisians">
+                <img src="/assets/iconos-logos/M 8.png" alt="img-slider" class="img-slider">
+            </a>
+
+        </div>
+    </section>
+    <!-- CIERRE BANNER MARCAS -->
+
+    <section class="section-categoria">
+        <h2 class="h2-categoria">Categoria</h2>
+
+        <div class="contenedor-categoria">
+
+            <div class="cont-cap-cate">
+                <div class="capa-categoria">
+                    <a (click)="goTo('rostro')">
+                        <img src="/assets/iconos-logos/Rostro-Icon.png" alt="img-categoria" class="img-categoria">
+                    </a>
+                </div>
+                <p class="p-categoria">Rostro</p>
+            </div>
+            
+            <div class="cont-cap-cate">
+                <div class="capa-categoria">
+                    <a (click)="goTo('ojos')">
+                        <img src="/assets/iconos-logos/Ojos-Icon.png" alt="img-categoria" class="img-categoria">
+                    </a>
+                </div>
+                <p class="p-categoria">Ojos</p>
+            </div>
+            
+            <div class="cont-cap-cate">
+                <div class="capa-categoria">
+                    <a (click)="goTo('labios')">
+                        <img src="/assets/iconos-logos/Labios-Icon.png" alt="img-categoria" class="img-categoria">
+                    </a>
+                </div>
+                <p class="p-categoria">Labios</p>
+            </div>
+           
+            <div class="cont-cap-cate">
+                <div class="capa-categoria">
+                    <a (click)="goTo('skincare')">
+                        <img src="/assets/iconos-logos/Skincare-Icon.png" alt="img-categoria" class="img-categoria">
+                    </a>
+                </div>
+                <p class="p-categoria">Skincare</p>
+            </div>
+            
+            <div class="cont-cap-cate">
+                <div class="capa-categoria">
+                    <a (click)="goTo('varios')">
+                        <img src="/assets/iconos-logos/Varios-Icon.png" alt="img-categoria" class="img-categoria">
+                    </a>
+                </div>
+                <p class="p-categoria">Varios</p>
+            </div>
+        </div>
+    </section>
+    <!-- CIERRE CATEGORIAS -->
+
+    <section class="section-productos">
+        <h2 class="h2-principal">Nuestros Productos</h2>
+
+        <div class="contenedor-card">
+
+            <div *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]" class="card">
+                <img src="/assets/productos/1.png" alt="img-card" class="img-card">
+                <div class="texto-card">
+                    <p class="p-card">
+                        Base Loreal París Infallible<br>
+                        24H Fresh Wear
+                        </p>
+                    <div class="precio-comprar">
+                        <h2 class="h2-precio">14$</h2>
+                        <a href="https://api.whatsapp.com/send?phone=584121367684" target="_blank" rel="noopener noreferrer" class="enlace-comprar">
+                            <div class="comprar">
+                                <img src="/assets/iconos-logos/WhatsApp.png" alt="icono-whatsApp" class="icono-wsp">
+                                <p class="p-comprar">Comprar</p>
+                            </div>
+                        </a>
+                    </div>  
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+    <!-- CIERRE SECCION CARDS -->
+
+    <section class="banner-final">
+        <div class="contenedor-banner_final">
+            <h2 class="h2-final">¿Quieres comprar<br>con nosotros?</h2>
+            <a href="https://api.whatsapp.com/send?phone=584121367684" target="_blank" rel="noopener noreferrer" class="enlace-contacto">
+                <div class="boton-final">Contáctanos aquí</div>
+            </a>
+        </div>
+    </section>
+
+    <div class="redes">
+        <a href="https://api.whatsapp.com/send?phone=584121367684" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/iconos-logos/WhatsApp.png" alt="img-whatsApp" class="img-redes">
+        </a>
+        <a href="https://www.instagram.com/nussabeautybar?igshid=NzZlODBkYWE4Ng%3D%3D" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/iconos-logos/Instagram.png" alt="img-instagram" class="img-redes">
+        </a>
+        <a href="https://www.google.com/maps/place/Las+Quintas+I,+Naguanagua+2005,+Carabobo/@10.248487,-68.0089464,17z/data=!3m1!4b1!4m6!3m5!1s0x8e805c53a9e78429:0x57d2cd29b6ce6353!8m2!3d10.248525!4d-68.008254!16s%2Fg%2F1tfkgmps?entry=ttu" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/iconos-logos/Ubicacion.png" alt="img-ubicacion" class="img-redes">
+        </a>
+    </div>
+
+    <app-footer></app-footer>
+</div>
+<router-outlet></router-outlet>

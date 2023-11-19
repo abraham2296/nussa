@@ -1,0 +1,32 @@
+footer{
+    background-color: #F81944 ;
+    height: 170px;
+    width: 1421px;
+}
+.contenedor-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.logo-footer{
+    width: 230px;
+    height: 82px;
+    margin-top: 2rem;
+    
+}
+.p-footer{
+    margin-top: 1rem;
+    color: #F5BFD1;
+    text-align: center;
+}
+@media (max-width: 400px) {
+    footer{
+        width: 393px;
+    }
+    .logo-footer{
+        width: 160px;
+        height: 60px;
+    }
+}
