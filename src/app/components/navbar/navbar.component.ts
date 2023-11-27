@@ -11,9 +11,5 @@ export class NavbarComponent {
 
   constructor(private router: Router){}
 
-
-
-  goTo(ruta: string){
-    this.router.navigate(['./inicio',ruta])
-  }
+   
 }

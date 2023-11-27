@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InicioComponent } from './inicio/inicio.component';
+import { InicioComponent } from './nussa/inicio/inicio.component';
 
 const routes: Routes = [
   {
@@ -9,11 +9,11 @@ const routes: Routes = [
   },
   {
     path: 'pages-categoria',
-    loadChildren: () => import('./pages-categoria/categoria.module').then(m => m.CategoriaModule)
+    loadChildren: () => import('./categorias/pages-categoria/categoria.module').then(m => m.CategoriaModule)
   },
   {
     path: 'pages-marca',
-    loadChildren: () => import('./pages-marca/marca.module').then(m => m.MarcaModule)
+    loadChildren: () => import('./marcas/pages-marca/marca.module').then(m => m.MarcaModule)
   },
   {
     path: '**',

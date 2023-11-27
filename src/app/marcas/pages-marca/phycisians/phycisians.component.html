@@ -1,0 +1,28 @@
+<section class="section-elf">
+    <app-navbar></app-navbar>
+    <div class="logo-marca">
+        <img src="/assets/iconos-logos/M 8.png" alt="" class="img-marca">
+    </div>
+    <div class="contenido">
+
+        <div *ngFor="let productoM of productoM8" class="card">
+            <img src="/assets/productos/{{productoM.id}}.png" alt="img-card" class="img-card">
+            <div class="texto-card">
+                <p class="p-card">
+                    {{productoM.description}}
+                    </p>
+                <div class="precio-comprar">
+                    <h2 class="h2-precio">{{productoM.price}}$</h2>
+                    <a href="https://api.whatsapp.com/send?phone=584121367684" target="_blank" rel="noopener noreferrer" class="enlace-comprar">
+                        <div class="comprar">
+                            <img src="/assets/iconos-logos/WhatsApp.png" alt="icono-whatsApp" class="icono-wsp">
+                            <p class="p-comprar">Comprar</p>
+                        </div>
+                    </a>
+                </div>  
+            </div>
+        </div>
+
+    </div>
+    <app-footer></app-footer>
+</section>

@@ -1,7 +1,7 @@
 footer{
     background-color: #F81944 ;
     height: 170px;
-    width: 1421px;
+    width: 1423px;
 }
 .contenedor-footer{
     display: flex;
@@ -23,10 +23,11 @@ footer{
 }
 @media (max-width: 400px) {
     footer{
+        height: 150px;
         width: 393px;
     }
     .logo-footer{
-        width: 160px;
-        height: 60px;
+        width: 140px;
+        height: 50px;
     }
 }
