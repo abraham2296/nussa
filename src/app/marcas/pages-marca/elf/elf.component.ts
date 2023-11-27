@@ -14,7 +14,7 @@ export class ElfComponent implements OnInit{
   constructor( private marckService: MarcaService){}
 
   ngOnInit(): void {
-    this.marckService.getProdMark4().subscribe( productosM4 => this.productoM4 = productosM4);
+    this.marckService.getProdMark(4).subscribe( productosM4 => this.productoM4 = productosM4);
   }
 
 }

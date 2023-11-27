@@ -14,6 +14,6 @@ export class RostroComponent implements OnInit{
   constructor( private categoService: CategoriaService){}
 
   ngOnInit(): void {
-    this.categoService.getProdCateg1().subscribe( productos1 => this.productos1 = productos1);
+    this.categoService.getProdCateg(1).subscribe( productos1 => this.productos1 = productos1);
   }
 }

@@ -14,7 +14,7 @@ export class RevolutionComponent {
   constructor( private marckService: MarcaService){}
 
   ngOnInit(): void {
-    this.marckService.getProdMark3().subscribe( productosM3 => this.productoM3 = productosM3);
+    this.marckService.getProdMark(3).subscribe( productosM3 => this.productoM3 = productosM3);
   }
 
 }

@@ -14,7 +14,7 @@ export class PhycisiansComponent {
   constructor( private marckService: MarcaService){}
 
   ngOnInit(): void {
-    this.marckService.getProdMark8().subscribe( productosM8 => this.productoM8 = productosM8);
+    this.marckService.getProdMark(8).subscribe( productosM8 => this.productoM8 = productosM8);
   }
 
 }

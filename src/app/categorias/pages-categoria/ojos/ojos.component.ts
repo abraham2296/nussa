@@ -14,6 +14,6 @@ export class OjosComponent {
   constructor( private categoService: CategoriaService){}
 
   ngOnInit(): void {
-    this.categoService.getProdCateg2().subscribe( productos2 => this.productos2 = productos2);
+    this.categoService.getProdCateg(2).subscribe( productos2 => this.productos2 = productos2);
   }
 }

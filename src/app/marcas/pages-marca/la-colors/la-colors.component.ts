@@ -14,7 +14,7 @@ export class LaColorsComponent {
   constructor( private marckService: MarcaService){}
 
   ngOnInit(): void {
-    this.marckService.getProdMark6().subscribe( productosM6 => this.productoM6 = productosM6);
+    this.marckService.getProdMark(6).subscribe( productosM6 => this.productoM6 = productosM6);
   }
 
 }

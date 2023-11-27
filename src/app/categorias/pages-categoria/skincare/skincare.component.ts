@@ -14,6 +14,6 @@ export class SkincareComponent {
   constructor( private categoService: CategoriaService){}
 
   ngOnInit(): void {
-    this.categoService.getProdCateg4().subscribe( productos4 => this.productos4 = productos4);
+    this.categoService.getProdCateg(4).subscribe( productos4 => this.productos4 = productos4);
   }
 }

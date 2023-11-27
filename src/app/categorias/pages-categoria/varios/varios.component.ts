@@ -15,6 +15,6 @@ export class VariosComponent {
   constructor( private categoService: CategoriaService){}
 
   ngOnInit(): void {
-    this.categoService.getProdCateg5().subscribe( productos5 => this.productos5 = productos5);
+    this.categoService.getProdCateg(5).subscribe( productos5 => this.productos5 = productos5);
   }
 }

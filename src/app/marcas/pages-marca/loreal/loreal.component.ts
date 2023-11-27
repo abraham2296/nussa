@@ -14,7 +14,7 @@ export class LorealComponent {
   constructor( private marckService: MarcaService){}
 
   ngOnInit(): void {
-    this.marckService.getProdMark1().subscribe( productosM1 => this.productoM1 = productosM1);
+    this.marckService.getProdMark(1).subscribe( productosM1 => this.productoM1 = productosM1);
   }
 
 }

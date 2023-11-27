@@ -14,7 +14,7 @@ export class MaybellineComponent {
   constructor( private marckService: MarcaService){}
 
   ngOnInit(): void {
-    this.marckService.getProdMark2().subscribe( productosM2 => this.productoM2 = productosM2);
+    this.marckService.getProdMark(2).subscribe( productosM2 => this.productoM2 = productosM2);
   }
 
 }

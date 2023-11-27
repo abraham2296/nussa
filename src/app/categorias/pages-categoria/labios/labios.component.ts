@@ -14,6 +14,6 @@ export class LabiosComponent {
   constructor( private categoService: CategoriaService){}
 
   ngOnInit(): void {
-    this.categoService.getProdCateg3().subscribe( productos3 => this.productos3 = productos3);
+    this.categoService.getProdCateg(3).subscribe( productos3 => this.productos3 = productos3);
   }
 }

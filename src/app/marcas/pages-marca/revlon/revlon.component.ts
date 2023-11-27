@@ -14,7 +14,7 @@ export class RevlonComponent {
   constructor( private marckService: MarcaService){}
 
   ngOnInit(): void {
-    this.marckService.getProdMark5().subscribe( productosM5 => this.productoM5 = productosM5);
+    this.marckService.getProdMark(5).subscribe( productosM5 => this.productoM5 = productosM5);
   }
 
 }

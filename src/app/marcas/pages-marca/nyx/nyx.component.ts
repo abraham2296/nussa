@@ -14,7 +14,7 @@ export class NyxComponent {
   constructor( private marckService: MarcaService){}
 
   ngOnInit(): void {
-    this.marckService.getProdMark7().subscribe( productosM7 => this.productoM7 = productosM7);
+    this.marckService.getProdMark(7).subscribe( productosM7 => this.productoM7 = productosM7);
   }
 
 }
