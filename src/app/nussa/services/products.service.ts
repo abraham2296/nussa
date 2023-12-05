@@ -14,7 +14,7 @@ export class ProductsService {
 
 
   getProducts(): Observable<Products[]>{
-    return this.http.get<Products[]>('http://localhost:3000/products')
+    return this.http.get<Products[]>('https://apinussa.onrender.com/products')
   }
 
 

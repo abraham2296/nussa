@@ -11,6 +11,6 @@ export class MarcaService {
   constructor( private http: HttpClient) { }
 
   getProdMark(id: number): Observable<Products[]>{
-    return this.http.get<Products[]>(`http://localhost:3000/marks/${id}/products`);
+    return this.http.get<Products[]>(`https://apinussa.onrender.com/marks/${id}/products`);
   }
 };
