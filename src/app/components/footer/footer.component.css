@@ -14,12 +14,15 @@ footer{
     width: 230px;
     height: 82px;
     margin-top: 2rem;
-    
+    cursor: pointer;
 }
 .p-footer{
     margin-top: 1rem;
     color: #F5BFD1;
     text-align: center;
+}
+.p-footer a{ 
+    color: #F5BFD1;
 }
 @media (max-width: 400px) {
     footer{

@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './nussa/inicio/inicio.component';
+import { LoadingComponent } from './nussa/loading/loading.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: InicioComponent
+  },
   {
     path: 'inicio',
     component: InicioComponent
@@ -17,7 +22,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'inicio',
+    redirectTo: 'inicio'
   }
 ];
 

@@ -4,5 +4,6 @@ export interface Products {
     price:       number;
     categoryId:  number;
     markId?:     number;
-    img:     number;
+    cantidad:    number;
+    img:         number;
 }

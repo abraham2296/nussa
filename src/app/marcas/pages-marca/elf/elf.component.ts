@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MarcaService } from '../../services/marca.service';
-import { Products } from '../../interfaces/marca.interface';
+import { ProductsService } from '../../../nussa/services/products.service';
+import { Products } from 'src/app/nussa/interfaces/inicio.interface';
 
 @Component({
   selector: 'app-elf',
@@ -11,10 +11,13 @@ export class ElfComponent implements OnInit{
 
   productoM4: Products[] = [];
 
-  constructor( private marckService: MarcaService){}
+  constructor( private productsService: ProductsService){}
 
   ngOnInit(): void {
-    this.marckService.getProdMark(4).subscribe( productosM4 => this.productoM4 = productosM4);
+    this.productsService.getProdMark(4).subscribe( productosM4 => this.productoM4 = productosM4);
   }
 
+  addToCart(products: Products){
+    return this.productsService.addProducts(products);
+  }
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Products } from '../../interfaces/categoria.interface';
-import { CategoriaService } from '../../services/categoria.service';
+import { Products } from 'src/app/nussa/interfaces/inicio.interface';
+import { ProductsService } from 'src/app/nussa/services/products.service';
 
 @Component({
   selector: 'app-varios',
@@ -12,9 +12,13 @@ export class VariosComponent {
 
   productos5: Products[] = [];
 
-  constructor( private categoService: CategoriaService){}
+  constructor( private productsService: ProductsService){}
 
   ngOnInit(): void {
-    this.categoService.getProdCateg(5).subscribe( productos5 => this.productos5 = productos5);
+    this.productsService.getProdCateg(5).subscribe( productos5 => this.productos5 = productos5);
+  }
+
+  addToCart(products: Products){
+    return this.productsService.addProducts(products);
   }
 }

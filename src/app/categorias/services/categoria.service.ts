@@ -12,8 +12,9 @@ export class CategoriaService {
 
 
 
-  getProdCateg(id:number): Observable<Products[]>{
-    return this.http.get<Products[]>(`https://apinussa.onrender.com/categories/${id}/products`);
-  }
+  // getProdCateg(id:number): Observable<Products[]>{
+    // return this.http.get<Products[]>(`https://apinussa.onrender.com/categories/${id}/products`);
+    // return this.http.get<Products[]>(`http://localhost:3000/categories/${id}/products`);
+  // }
 
 };

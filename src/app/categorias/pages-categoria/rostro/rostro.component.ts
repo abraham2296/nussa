@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Products } from '../../interfaces/categoria.interface';
-import { CategoriaService } from '../../services/categoria.service';
+import { Products } from 'src/app/nussa/interfaces/inicio.interface';
+import { ProductsService } from 'src/app/nussa/services/products.service';
 
 @Component({
   selector: 'app-rostro',
@@ -11,9 +11,13 @@ export class RostroComponent implements OnInit{
 
   productos1: Products[] = [];
 
-  constructor( private categoService: CategoriaService){}
+  constructor( private productsService: ProductsService){}
 
   ngOnInit(): void {
-    this.categoService.getProdCateg(1).subscribe( productos1 => this.productos1 = productos1);
+    this.productsService.getProdCateg(1).subscribe( productos1 => this.productos1 = productos1);
+  }
+
+  addToCart(products: Products){
+    return this.productsService.addProducts(products);
   }
 }

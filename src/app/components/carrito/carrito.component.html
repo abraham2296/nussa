@@ -1,0 +1,30 @@
+<div class="contenedorCard">
+    <article *ngFor=" let producto of myCart$ | async " class="productCard">
+        <div class="imgCarritoCard">
+            <img loading="lazy" src="/assets/productos/{{producto.id}}.png" alt="img-prod" class="imgProdCard">
+        </div>
+        <div class="productDescriptions">
+            <p>{{producto.description}}</p>
+        </div>
+
+        <div class="productCartPriceCantidad">
+            <div class="price">
+                <p>${{totalProducto( producto.price, producto.cantidad)}}</p>
+            </div>
+            <div class="cantidad">
+                <span>{{producto.cantidad}}</span>
+                <div class="buttonsController">
+                    <i class="bi bi-dash-lg" (click)="sumarRestarCantidades('minus', producto.id)"></i>
+                    <i class="bi bi-plus-lg" (click)="sumarRestarCantidades('add', producto.id)"></i>
+                </div>
+            </div>
+        </div>
+        <div class="buttonsDelete">
+            <i class="bi-delete bi-trash3-fill" (click)="deleteProducts(producto.id)"></i>
+        </div>
+    </article>
+    <div class="cartTotalPagar">
+        <p class="p-totalPagar">Total: <span>${{totalCarrito()}}</span></p>
+        <a href="https://api.whatsapp.com/send?phone=584121367684" target="_blank" rel="noopener noreferrer" class="enlace-comprar"><button class="cartBtn" type="submit">Comprar</button></a>
+    </div>
+</div>

@@ -12,20 +12,47 @@ export class InicioComponent implements OnInit{
 
   productos: Products[] = [];
 
-  constructor( private productsService: ProductsService,
-               private router : Router){}
+  // remainingTime: any;  
 
-
-
+    constructor( private productsService: ProductsService, private router : Router){}
 
   ngOnInit(): void {
 
-    this.productsService.getProducts().subscribe( productos => this.productos = productos);
+        this.mostrarProductos();
+    
+      //contador regresivo
+      // const targetDate = new Date('2024-02-01T23:59:59');
 
+  //     setInterval(() => {
+  //       const now = new Date().getTime();
+  //       const distance = targetDate.getTime() - now;
+
+  //       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  //       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  //       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  //       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  //     this.remainingTime = {
+  //       days: days,
+  //       hours: hours,
+  //       minutes: minutes,
+  //       seconds: seconds
+  //    };
+  //  }, 1000);
+   
   }
 
+    mostrarProductos() {
+      this.productsService.getProductsAll().subscribe( producto => this.productos = producto);
 
-  goTo(ruta: string){
-    this.router.navigate(['/pages-categoria', ruta]);
-  }
+    }
+
+    goTo(ruta: string){
+      this.router.navigate(['/pages-categoria', ruta]);
+    }
+    
+    addToCart(products: Products){
+      return this.productsService.addProducts(products);
+    }
+
 }

@@ -7,20 +7,18 @@
     </div>
     <div class="contenido">
 
-        <div *ngFor="let producto of productos3" class="card">
-            <img src="/assets/productos/{{producto.id}}.png" alt="img-card" class="img-card">
+        <div *ngFor="let productoC of productos3" class="card">
+            <img loading="lazy" src="/assets/productos/{{productoC.id}}.png" alt="img-card" class="img-card">
             <div class="texto-card">
                 <p class="p-card">
-                    {{producto.description}}
+                    {{productoC.description}}
                     </p>
                 <div class="precio-comprar">
-                    <h2 class="h2-precio">{{producto.price}}$</h2>
-                    <a href="https://api.whatsapp.com/send?phone=584121367684" target="_blank" rel="noopener noreferrer" class="enlace-comprar">
-                        <div class="comprar">
-                            <img src="/assets/iconos-logos/WhatsApp.png" alt="icono-whatsApp" class="icono-wsp">
-                            <p class="p-comprar">Comprar</p>
-                        </div>
-                    </a>
+                    <h2 class="h2-precio">{{productoC.price}}$</h2>
+                    <div class="comprar" (click)="addToCart(productoC)">
+                        <p class="p-comprar">Agregar</p>
+                        <i class="bi-comprar bi-cart4"></i>
+                    </div>
                 </div>  
             </div>
         </div>

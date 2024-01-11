@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Products } from '../../interfaces/marca.interface';
-import { MarcaService } from '../../services/marca.service';
+import { Products } from 'src/app/nussa/interfaces/inicio.interface';
+import { ProductsService } from 'src/app/nussa/services/products.service';
 
 @Component({
   selector: 'app-nyx',
@@ -11,10 +11,13 @@ export class NyxComponent {
 
   productoM7: Products[] = [];
 
-  constructor( private marckService: MarcaService){}
+  constructor( private productsService: ProductsService){}
 
   ngOnInit(): void {
-    this.marckService.getProdMark(7).subscribe( productosM7 => this.productoM7 = productosM7);
+    this.productsService.getProdMark(7).subscribe( productosM7 => this.productoM7 = productosM7);
   }
 
+  addToCart(products: Products){
+    return this.productsService.addProducts(products);
+  }
 }

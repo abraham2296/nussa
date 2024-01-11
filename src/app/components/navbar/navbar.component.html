@@ -1,23 +1,36 @@
 <div class="contenedor-navbar">
 
     <div class="navbar-item-1">
-        <a href="/src/app/inicio/inicio.component.html">
-            <img src="/assets/iconos-logos/Logo-Original.png" alt="logo" class="logo">
-        </a>
+            <a (click)="redirecTo('inicio')">
+                <img loading="lazy" src="/assets/iconos-logos/Logo-Original.png" alt="logo" class="logo">
+            </a>
+    </div>
+    
+    <!-- <div class="navbar-item-2">
+            <a href="https://api.whatsapp.com/send?phone=584121367684" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/iconos-logos/WhatsApp.png" alt="" class="ico-header whatsApp">
+            </a>
+    
+            <a href="https://www.instagram.com/nussabeautybar?igshid=NzZlODBkYWE4Ng%3D%3D" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/iconos-logos/Instagram.png" alt="" class="ico-header instagram">
+            </a>
+    
+            <a href="https://www.google.com/maps/place/Las+Quintas+I,+Naguanagua+2005,+Carabobo/@10.248487,-68.0089464,17z/data=!3m1!4b1!4m6!3m5!1s0x8e805c53a9e78429:0x57d2cd29b6ce6353!8m2!3d10.248525!4d-68.008254!16s%2Fg%2F1tfkgmps?entry=ttu" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/iconos-logos/Ubicacion.png" alt="" class="ico-header ubicacion">
+            </a>
+    </div> -->
+    
+    <div class="navbar-item-3">
+        <div class="contenedorCarrito" (click)="mostrarContenido()">
+            <div class="Carrito" *ngIf="(myCart$ | async)?.length">
+                <p>{{(myCart$ | async)?.length}}</p>
+            </div>
+            <i class="bi bi-cart4"></i>
+        </div>
+        <div class="linea"></div>
     </div>
 
-    <div class="navbar-item-2">
-        <a href="https://api.whatsapp.com/send?phone=584121367684" target="_blank" rel="noopener noreferrer">
-            <img src="/assets/iconos-logos/WhatsApp.png" alt="" class="ico-header whatsApp">
-        </a>
-
-        <a href="https://www.instagram.com/nussabeautybar?igshid=NzZlODBkYWE4Ng%3D%3D" target="_blank" rel="noopener noreferrer">
-            <img src="/assets/iconos-logos/Instagram.png" alt="" class="ico-header instagram">
-        </a>
-
-        <a href="https://www.google.com/maps/place/Las+Quintas+I,+Naguanagua+2005,+Carabobo/@10.248487,-68.0089464,17z/data=!3m1!4b1!4m6!3m5!1s0x8e805c53a9e78429:0x57d2cd29b6ce6353!8m2!3d10.248525!4d-68.008254!16s%2Fg%2F1tfkgmps?entry=ttu" target="_blank" rel="noopener noreferrer">
-            <img src="/assets/iconos-logos/Ubicacion.png" alt="" class="ico-header ubicacion">
-        </a>
-    </div>
-
+</div>
+<div class="cart-products" [ngClass]={show:viewCart}>
+    <app-carrito></app-carrito>
 </div>

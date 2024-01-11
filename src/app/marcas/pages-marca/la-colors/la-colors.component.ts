@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Products } from '../../interfaces/marca.interface';
-import { MarcaService } from '../../services/marca.service';
+import { Products } from 'src/app/nussa/interfaces/inicio.interface';
+import { ProductsService } from 'src/app/nussa/services/products.service';
 
 @Component({
   selector: 'app-la-colors',
@@ -11,10 +11,13 @@ export class LaColorsComponent {
 
   productoM6: Products[] = [];
 
-  constructor( private marckService: MarcaService){}
+  constructor( private productsService: ProductsService){}
 
   ngOnInit(): void {
-    this.marckService.getProdMark(6).subscribe( productosM6 => this.productoM6 = productosM6);
+    this.productsService.getProdMark(6).subscribe( productosM6 => this.productoM6 = productosM6);
   }
 
+  addToCart(products: Products){
+    return this.productsService.addProducts(products);
+  }
 }

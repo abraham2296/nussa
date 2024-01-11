@@ -78,10 +78,15 @@
     height: 30px;
     border-radius: 30px;
     margin-top: -5px;
+    column-gap: 0.2rem;
+    cursor: pointer;
 }
-.icono-wsp{
-    height: 30px;
-    width: 30px;
+.comprar:hover{
+    background-color: #FC3765;
+}
+.bi-comprar{
+    color: #F5BFD1;
+    font-size: 20px;
 }
 .p-comprar{
     color: #F5BFD1;
@@ -119,9 +124,5 @@
         width: 90px;
         height: 20px;
         margin-top: -5px;
-    }
-    .icono-wsp{
-        height: 20px;
-        width: 20px;
     }
 }

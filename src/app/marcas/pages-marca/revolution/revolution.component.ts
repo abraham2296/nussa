@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Products } from '../../interfaces/marca.interface';
-import { MarcaService } from '../../services/marca.service';
+import { Products } from 'src/app/nussa/interfaces/inicio.interface';
+import { ProductsService } from 'src/app/nussa/services/products.service';
 
 @Component({
   selector: 'app-revolution',
@@ -11,10 +11,13 @@ export class RevolutionComponent {
 
   productoM3: Products[] = [];
 
-  constructor( private marckService: MarcaService){}
+  constructor( private productsService: ProductsService){}
 
   ngOnInit(): void {
-    this.marckService.getProdMark(3).subscribe( productosM3 => this.productoM3 = productosM3);
+    this.productsService.getProdMark(3).subscribe( productosM3 => this.productoM3 = productosM3);
   }
 
+  addToCart(products: Products){
+    return this.productsService.addProducts(products);
+  }
 }

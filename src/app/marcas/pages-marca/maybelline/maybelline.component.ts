@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Products } from '../../interfaces/marca.interface';
-import { MarcaService } from '../../services/marca.service';
+import { Products } from 'src/app/nussa/interfaces/inicio.interface';
+import { ProductsService } from 'src/app/nussa/services/products.service';
 
 @Component({
   selector: 'app-maybelline',
@@ -11,10 +11,13 @@ export class MaybellineComponent {
 
   productoM2: Products[] = [];
 
-  constructor( private marckService: MarcaService){}
+  constructor( private productsService: ProductsService){}
 
   ngOnInit(): void {
-    this.marckService.getProdMark(2).subscribe( productosM2 => this.productoM2 = productosM2);
+    this.productsService.getProdMark(2).subscribe( productosM2 => this.productoM2 = productosM2);
   }
-
+  
+ addToCart(products: Products){
+  return this.productsService.addProducts(products);
+}
 }

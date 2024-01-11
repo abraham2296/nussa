@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Products } from '../../interfaces/marca.interface';
-import { MarcaService } from '../../services/marca.service';
+import { Products } from 'src/app/nussa/interfaces/inicio.interface';
+import { ProductsService } from 'src/app/nussa/services/products.service';
 
 @Component({
   selector: 'app-loreal',
@@ -11,10 +11,13 @@ export class LorealComponent {
 
   productoM1: Products[] = [];
 
-  constructor( private marckService: MarcaService){}
+  constructor( private productsService: ProductsService){}
 
   ngOnInit(): void {
-    this.marckService.getProdMark(1).subscribe( productosM1 => this.productoM1 = productosM1);
+    this.productsService.getProdMark(1).subscribe( productosM1 => this.productoM1 = productosM1);
   }
 
+  addToCart(products: Products){
+    return this.productsService.addProducts(products);
+  }
 }
